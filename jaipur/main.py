@@ -15,6 +15,10 @@ def main():
         cmd = repl[0]
         if cmd == "exit":
             print("EXIT")
+        elif cmd == "greedisgood":
+            take, give = state.greedy_card_exchange(state.market, state.hand)
+            print("take", take)
+            print("give", give)
         elif cmd == "exchange":
             middle = repl.index("for")
             print("take", repl[1:middle])
